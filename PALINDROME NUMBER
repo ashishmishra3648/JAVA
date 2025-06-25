@@ -1,0 +1,26 @@
+// ALTERNATE PALINDROME NUMBER!
+
+package package1;
+
+public class Palindrome {
+	public static void main(String[] args) {
+//		int n=121121;
+//		System.out.println(isPalindrome(n,n,0));
+		range(1,1000,0);
+		
+	}
+	static int range(int st,int end,int count) {
+		if(st>end)return -1 ;
+		if(isPalindrome(st,st,0)) {
+			count++;
+			if(count%2!=0) System.out.println(st+" ");
+		}
+		return range(st+1,end,count);
+	}
+	static boolean isPalindrome(int n,int m,int rev) {
+		if(n==0) return rev==m;
+		int rem=n%10;
+		rev=(rev*10)+rem;
+		return isPalindrome(n/10,m,rev);
+	}
+}
