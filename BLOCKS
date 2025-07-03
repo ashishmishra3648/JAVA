@@ -19,3 +19,32 @@ public class a {
 
 }
 
+------------------------------------------------------------------------------------------
+
+
+// NON-STATIC BLOCKS!
+
+package OOPS.Blocks;
+
+public class B {
+	{
+		System.out.println("Non-static Block 1");
+		
+	}
+	public static void main(String[] args) {
+		System.out.println("Main starts");
+		System.out.println("Main ends");
+		new B();
+	}
+	{
+		System.out.println("Non-static Block 2");
+		
+	}
+	{
+		System.out.println("Non-static Block 3");
+		
+	}
+
+}
+
+
