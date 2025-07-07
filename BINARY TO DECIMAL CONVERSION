@@ -1,0 +1,19 @@
+//BINARY TO DECIMAL CONVERSION
+
+class Binary 
+{
+	public static void main(String[] args) 
+	{
+		int binary=1011;
+		int decimal=0;
+		int prod=1;
+		while(binary>0){
+			int bit=binary%10;
+			decimal=(prod*bit)+decimal;
+			binary/=10;
+			prod=prod*2;
+		}
+		System.out.println("Decimal : " + decimal);
+		
+	}
+}
