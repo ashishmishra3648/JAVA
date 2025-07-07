@@ -1,0 +1,37 @@
+//ARMSTRONG NUMBER
+
+import java.util.Scanner;
+class Armstrong 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int temp=n;
+		int original=n;
+		int length=0;
+		
+		
+		while(temp>0){
+			length++;
+			temp/=10;
+		}
+		int sum=0;
+		while(n>0){
+			int rem=n%10;
+			int prod=1;
+			
+			for(int i=1;i<=length;i++){
+				prod=prod*rem;
+			}
+			sum+=prod;
+			n/=10;
+		}
+			
+		
+		
+		if(sum==original) System.out.println("Armstrong Number ");
+		else System.out.println("Not a Armstrong Number ");
+	
+	}
+}
