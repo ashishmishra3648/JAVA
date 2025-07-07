@@ -1,0 +1,30 @@
+// DISARIUM NUMBER
+
+import java.util.Scanner;
+class Disarium 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number : ");
+		int n=sc.nextInt();
+		int original=n;
+		int temp=n;
+		int length=0;
+		int sum=0;
+		
+		while(temp>0){
+			length++;
+			temp/=10;
+		}
+		
+		while(n>0){
+			int rem=n%10;
+			sum+=Math.pow(rem, length);
+			length--;
+			n/=10;
+		}
+		if(sum==original) System.out.println("Disarium number ");
+		else System.out.println("Not a Disarium number ");
+	}
+}
