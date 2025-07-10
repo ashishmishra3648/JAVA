@@ -1,0 +1,27 @@
+package package1;
+
+public class PrimePalindrome {
+	public static void main(String[] args) {
+		System.out.println(isPrimePalindrome(929));
+		
+	}
+	static boolean isPrime(int n,int i){
+		if(i==1) return true;
+		if(n<=1||n%i==0) return false;
+		return isPrime(n,i-1);
+	}
+	static boolean isPalindrome(int n,int m,int rev) {
+		if(n==0) return rev==m;
+		int rem=n%10;
+		rev=(rev*10)+rem;
+		return isPalindrome(n/10,m,rev);
+	}
+	static boolean  isPrimePalindrome(int n) {
+		return isPrime(n,n/2) && isPalindrome(n,n,0);
+			
+		}
+		
+		
+	}
+
+
