@@ -42,3 +42,35 @@ public class Test {
 	}
 
 }
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package INHERITANCE;
+
+class AA{
+	AA(){
+		this(10);
+		System.out.println("AA()-constructor");
+	}
+}
+class BB extends AA{
+	BB(){
+		this(20);
+		System.out.println("BB()-constructor");
+	}
+}
+class CC extends BB{
+	CC(){
+		System.out.println("CC()-constructor");
+	}
+	CC(int i){
+		this();
+		System.out.println("CC(int i)-constructor : "+i);
+	}
+}
+public class Demo1 {
+	public static void main(String[] args) {
+		new CC(100);
+	}
+
+}
+
