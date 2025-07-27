@@ -1,1 +1,24 @@
+package INHERITANCE;
 
+public class D {
+	
+		    D() {
+		        System.out.println("A()-constructor");
+		    }
+
+		    D(int i) {
+		        this();
+		        System.out.println("A(int i)-constructor : " + i);
+		    }
+
+		    D(int i, int j) {
+		        this(30);
+		        System.out.println("A(int i,int j)-constructor : " + i + " , " + j);
+		    }
+
+		    public static void main(String[] args) {
+		        new D(10, 20);
+		    }
+		}
+
+-------------------------------------------------------------------------------------------------------------------------------------
