@@ -22,3 +22,23 @@ public class D {
 		}
 
 -------------------------------------------------------------------------------------------------------------------------------------
+
+package INHERITANCE;
+
+class E{
+	E(int i){
+		System.out.println("A(int i-constructor : "+ i);
+	}
+}
+class F extends E{
+	F(int i){
+		super(10);
+		System.out.println("B(int i)-constructor : "+i);
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+		new F(20);
+	}
+
+}
