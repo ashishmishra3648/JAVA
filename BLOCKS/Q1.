@@ -1,0 +1,31 @@
+package BLOCKS;
+
+public class Test {
+	int i;
+	static int j;
+	static {
+		j=10;
+	}
+	{
+		i=20;
+		j=30;
+	}
+	public static void main(String[] args) {
+		{
+			System.out.println(j);
+			
+		}
+		Test t=new Test();
+		System.out.println(t.i);
+		System.out.println(t.j);
+	}
+	{
+		i=40;
+		j=50;
+	}
+	static {
+		j=60;
+	}
+	
+
+}
