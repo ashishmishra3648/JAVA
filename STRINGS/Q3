@@ -1,0 +1,14 @@
+package STRINGS;
+
+public class Demo3 {
+	public static void main(String[] args) {
+		Object o1="java";
+		System.out.println(o1);
+		
+		System.out.println(o1.equals("java"));
+		
+		String s =(String) o1; //Downcasting o1 Object type to s String type .
+		System.out.println(s.equalsIgnoreCase("java"));
+	}
+
+}
