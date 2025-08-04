@@ -1,0 +1,34 @@
+package STRINGS;
+
+//WITH REPLACE METHOD :
+public class ReplaceMethod {
+//	public static void main(String[] args) {
+//		String s1="madam is very beautiful and madam speak hindi.";
+//		String s2=s1.replace("madam", "sir");
+//		
+//		System.out.println(s2);
+//		
+//		String s3="pool";
+////		String s4=s3.replace('o', 'x');
+//		String s4=s3.replace("o", " happy ");
+//		System.out.println(s4);
+//	}
+	
+	
+//	---------------------------------------------------------
+
+
+  // WITHOUT REPLACE METHOD :
+	public static void main(String[] args) {
+		String s="pool";
+		String res="";
+		for(int i=0;i<s.length();i++) {
+			char c=s.charAt(i);
+			if(c=='o') res += '@';
+			else res+= c;
+			
+		}
+		System.out.println(res);
+	}
+
+}
