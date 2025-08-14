@@ -1,0 +1,86 @@
+package DSA;
+
+public class ArrayList {
+    Object a [] = new Object[10]; // initial capacity
+    int count = 0;               // number of elements stored
+
+    //---------------------------------------------------------------------------
+    public void add(Object element) {
+        if (count == a.length) increase();
+        a[count++] = element;
+    }
+
+  //---------------------------------------------------------------------------
+    public void increase() {
+        Object[] b = new Object[a.length + 5]; // increase capacity by 5
+        System.arraycopy(a, 0, b, 0, a.length); // copy old array to new one
+        a = b;
+    }
+
+  //---------------------------------------------------------------------------
+    public Object get(int index) {
+        if (index < 0 || index >= count) throw new IndexOutOfBoundsException();
+        return a[index];
+    }
+
+  //---------------------------------------------------------------------------
+    public int size() {
+        return count;
+    }
+
+  //---------------------------------------------------------------------------
+    public static void print(ArrayList a2) {
+        for (int i = 0; i < a2.size(); i++) {
+            System.out.println(a2.get(i));
+        }
+    }
+    
+  //---------------------------------------------------------------------------
+    public boolean isEmpty() {
+    	return count==0;
+    }
+    
+  //---------------------------------------------------------------------------
+    public void remove(int index) {
+    	if (index < 0 || index >= count) throw new IndexOutOfBoundsException();
+    	for(int i=index;i<size();i++) a[i]=a[i+1];
+    	count--;
+    }
+    
+  //---------------------------------------------------------------------------
+    public void addAtIndex(Object element,int index) {
+    	for(int i=size();i>index;i--) {
+    		a[i]=a[i-1];
+    	}
+    	a[index]=element;
+    	count++;
+    }
+
+  //---------------------------------------------------------------------------
+    public static void main(String[] args) {
+        ArrayList a = new ArrayList();
+        a.add(10);
+        a.add(20);
+        a.add(30);
+        a.add(40);
+        a.add(50);
+        
+        print(a);
+        System.out.println();
+        a.remove(1);
+        print(a);
+        System.out.println();
+        a.remove(0);
+        print(a);
+        System.out.println();
+        a.remove(2);
+        
+        a.addAtIndex(10, 0);
+        a.addAtIndex(20, 1);
+        a.addAtIndex(50, 4);
+       
+        
+
+        print(a);
+    }
+}
