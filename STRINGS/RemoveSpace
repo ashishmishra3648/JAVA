@@ -1,0 +1,33 @@
+package STRINGS;
+import java.util.Scanner;
+
+public class RemoveSpace {
+	
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.print("Enter a string: ");
+	        String userInput = scanner.nextLine();
+
+	        
+
+	        removeSpaces(userInput);
+	        scanner.close();
+	    }
+
+	
+	    public static void removeSpaces(String str) {
+	        String result = "";
+
+	        for (int i = 0; i < str.length(); i++) {
+	            char ch = str.charAt(i);
+	            if (ch != ' ') {
+	                result += ch; 
+	            }
+	        }
+
+	       System.out.println(result);
+	    }
+	}
+
+
+
