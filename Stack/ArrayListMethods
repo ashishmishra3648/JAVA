@@ -1,0 +1,72 @@
+package Stack;
+
+import java.util.Arrays;
+
+public class ArrayListMethods {
+	     Object[] arr;   // backing array
+	     int count=0;      // number of elements
+
+	    // Default constructor
+	    public ArrayListMethods() {
+	        arr = new Object[10]; // default capacity
+//	        count = 0;
+	    }
+
+	    // Constructor with custom capacity
+	    public ArrayListMethods(int capacity) {
+	        arr = new Object[capacity];
+//	        count = 0;
+	    }
+
+	    // Push element (add at top of stack)
+	    public void push(Object ele) {
+	        if (count == arr.length) {
+	            resize();
+	        }
+	        arr[count++] = ele;
+	    }
+
+	    // Pop element (remove from top of stack)
+	    public Object pop() {
+	        if (isEmpty()) {
+	            throw new IllegalStateException("Stack is empty");
+	        }
+	        Object ele = arr[--count];
+//	        arr[count] = null; // clear reference
+	        return ele;
+	    }
+
+	    // Peek element (see top of stack without removing)
+	    public Object peek() {
+	        if (isEmpty()) {
+	            throw new IllegalStateException("Stack is empty");
+	        }
+	        return arr[count - 1];
+	    }
+
+	    // Size of stack
+	    public int size() {
+	        return count;
+	    }
+
+	    // Is stack empty?
+	    public boolean isEmpty() {
+	        return count == 0;
+	    }
+
+	    // Resize array (double the capacity)
+	    public void resize() {
+	        arr = Arrays.copyOf(arr, arr.length * 2);
+	    }
+
+	    // Print all elements (bottom to top)
+	    public void print() {
+	        for (int i = 0; i < count; i++) {
+	            System.out.println(arr[i]);
+	        }
+//	        System.out.println();
+	    }
+	}
+
+
+
