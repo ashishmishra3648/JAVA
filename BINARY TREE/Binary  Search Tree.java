@@ -1,6 +1,6 @@
 package BINARY_TREE;
 
-public class BibarySearchTree {
+public class BinarySearchTree {
 
 	    Node root;
 	    int count = 0;
