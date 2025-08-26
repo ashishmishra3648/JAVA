@@ -2,23 +2,23 @@ package STRINGS;
 
 //WITH REPLACE METHOD :
 public class ReplaceMethod {
-//	public static void main(String[] args) {
-//		String s1="madam is very beautiful and madam speak hindi.";
-//		String s2=s1.replace("madam", "sir");
-//		
-//		System.out.println(s2);
-//		
-//		String s3="pool";
-////		String s4=s3.replace('o', 'x');
-//		String s4=s3.replace("o", " happy ");
-//		System.out.println(s4);
-//	}
+public static void main(String[] args) {
+	String s1="madam is very beautiful and madam speak hindi.";
+		String s2=s1.replace("madam", "sir");
+		
+		System.out.println(s2);
+		
+		String s3="pool";
+		String s4=s3.replace('o', 'x');
+	String s4=s3.replace("o", " happy ");
+	System.out.println(s4);
+	}
 	
 	
 //	---------------------------------------------------------
 
 
-  // WITHOUT REPLACE METHOD :
+  // WITHOUT REPLACE METHOD USING CHARAT(INDEX I) :
 	public static void main(String[] args) {
 		String s="pool";
 		String res="";
@@ -32,3 +32,22 @@ public class ReplaceMethod {
 	}
 
 }
+
+---------------------------------------------------------
+
+USING CHARACTER ARRAY:
+
+public static void main(String[] args) {
+		String s="pool";
+		String res="";
+		char[] ch=s.toCharArray();
+		for(int k=0;k<s.length();k++) {
+	
+		
+		
+		if(ch[k]=='o') res+='x';
+		else res+=ch[k];
+		}
+		System.out.println(res);
+		
+	}
