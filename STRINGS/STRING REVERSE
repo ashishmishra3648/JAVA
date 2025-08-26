@@ -37,7 +37,7 @@ public class StringReverse {
 		while(i<j) {
 			char temp=a[j];
 			a[j]=a[i];
-			a[i]=a[temp];
+			a[i]=temp;
 			i++;
 			j--;
 		}
