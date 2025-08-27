@@ -9,8 +9,12 @@ public class MissingVowels {
 		        printMissingVowels(input);
 		        scanner.close();
 		    }
+
+
+-------------------------------------------------------------------------
+APPROACH 1:
 		    public static void printMissingVowels(String s) {
-	    char[] vowels = {'A', 'E', 'O', 'U', 'e', 'o', 'u'};
+	    char[] vowels = {'A', 'E', 'I', 'O', 'U','a', 'e','i', 'o', 'u'};
 	    String result = "";
 	    for (int i = 0; i < vowels.length; i++) {
 	        if (s.indexOf(vowels[i]) == -1) {
@@ -22,6 +26,36 @@ public class MissingVowels {
 	    }
 	    System.out.println(result);
 	}
+
+-------------------------------------------------------------------------------
+APROACH 2:
+		    
+		    public static void printMissingVowels(String s){
+		        char[] c={'a','e','i','o','u','A','E','I','O','U'};
+		        
+		        String res=" ";
+		        for(int i=0;i<c.length;i++){
+		        	boolean found=false;
+		            
+		            for(int j=0;j<s.length();j++){
+		                if(c[i]==s.charAt(j)) { 
+		                	found = true;
+		                	break;
+		                }
+		            
+		               
+		            }
+		            
+		            if(!found) {
+		            	if (!res.isEmpty()) {
+			                res += ",";
+			            }
+		            	
+		            	res+=c[i];
+		            }
+		        }
+		        System.out.println(res);
+		    }
 
 
 }
