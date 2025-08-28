@@ -21,3 +21,56 @@ public class OccuranceOfEachCharacter {
 
 }
 }
+
+-----------------------------------------------------------------------------------------------------------------------------
+MAX & MIN OCCURANCE :
+
+
+public class OccuranceOfEachCharacter {
+	public static void main(String[] args) {
+		String s="malayalam";
+		count(s);
+		
+
+}
+	public static void count(String s) {
+		char[] ch=s.toCharArray();
+		int maxCount=0,minCount=0;
+		char maxchar=' ',minchar=' ';
+		for(int i=0;i<ch.length;i++) {
+			if(ch[i]==' ') continue;
+			int count=1;
+			
+		for(int j=i+1;j<ch.length;j++) {
+			if(ch[i]==ch[j]) {
+				count++;
+				ch[j]=' ';
+				
+		}
+		}
+		if(minCount==0) {
+			minCount=count;
+			maxCount=count;
+			minchar=ch[i];
+			maxchar=ch[i];
+		}
+		
+		if(count>maxCount) {
+			maxCount=count;
+			maxchar=ch[i];
+		}
+		if(count<minCount) {
+			minCount=count;
+			minchar=ch[i];
+		}
+		}
+		
+		
+		
+		
+		
+		System.out.println("Minimum Occurred character is : "+minchar+" ->"+minCount);
+		System.out.println("Maximum Occurred character is : "+maxchar+" ->"+maxCount);
+	}
+		
+	}
