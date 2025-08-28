@@ -1,0 +1,25 @@
+
+public class SumOfNumbers {
+	public static void main(String[] args) {
+		
+		String s="ab123cd34ef";
+		char[] a=s.toCharArray();
+		int sum=0;
+		int i=0;
+		while(i<a.length) {
+			int n=0;
+			while(a[i]>='0' && a[i]<='9') {
+			
+				n=(n*10)+(a[i]-'0');
+				i++;
+			}
+			
+		sum+=n;
+		i++;
+	}
+			
+		System.out.println(sum);
+		}
+	}
+
+
