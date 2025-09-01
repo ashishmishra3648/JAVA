@@ -1,0 +1,59 @@
+package ARRAY_LIST;
+
+
+
+public class ArrayList {
+	
+		
+		Object[] a=new  Object[10];
+		int count=0;
+	
+	public void add(Object ele) {
+		a[count++]=ele;
+		if(count==a.length) increase();
+	}
+	
+	public void increase() {
+		Object[] b=new Object[a.length*2];
+		for(int i=0;i<a.length;i++) {
+			b[i]=a[i];
+		}
+		a=b;
+	}
+	public void display() {
+		for(int i=0;i<count;i++) {
+			System.out.println(a[i]);
+		}
+	}
+	public boolean isEmpty() { return count==0;
+	}
+	public int size() {
+		return count;
+	}
+	public void get(int index) {
+		if(index<0||index>=size()) throw new IndexOutOfBoundsException();
+		System.out.println(a[index]);
+	}
+	public void addAtIndex(Object ele,int index) {
+		if(index<0||index>size()) throw new IndexOutOfBoundsException();
+		if (count == a.length) increase();
+		for(int i=size();i>index;i--) {
+			a[i]=a[i-1];
+		}
+		a[index]=ele;
+		count++;
+	}
+	public void remove(int index) {
+		if(index<0||index>=size()) throw new IndexOutOfBoundsException();
+		for(int i=index;i<size();i++) {
+			a[i]=a[i+1];
+		}
+		count--;
+		
+	}
+	
+
+}
+
+	
+
