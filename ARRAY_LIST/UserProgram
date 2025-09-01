@@ -1,0 +1,27 @@
+package ARRAY_LIST;
+
+public class UserProgram {
+	public static void main(String[] args) {
+		
+		ArrayList a=new ArrayList();
+		a.add(10);
+		a.add(20);
+		a.add(30);
+		a.add(40);
+		a.add(50);
+		
+		a.display();
+		
+		a.isEmpty();
+		System.out.println("Size of the Array List : "+a.size());
+		
+		a.get(3);
+		a.get(1);
+		a.addAtIndex(60, 5);
+		a.display();
+		a.remove(4);
+		a.display();
+		
+	}
+
+}
